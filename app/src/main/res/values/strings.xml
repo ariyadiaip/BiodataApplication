@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Biodata App</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="main">Data Siswa</string>
+    <string name="input">Input Data</string>
+    <string name="detail">Detail Data</string>
+    <string name="update">Update Data</string>
+</resources>
