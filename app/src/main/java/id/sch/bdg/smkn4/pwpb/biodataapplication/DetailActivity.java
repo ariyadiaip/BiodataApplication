@@ -11,16 +11,22 @@ public class DetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+
+        this.setTitle("Detail Data");
         Student student = getIntent().getParcelableExtra(CURRENT_PERSON);
         initialize();
         txtNo.setText(student.getNo()+"");
         txtName.setText(student.getName());
-        if (student.getJenkel() == "L") {
-            txtGender.setText("Laki - Laki");
-        } else if (student.getJenkel() == "P") {
-            txtGender.setText("Perempuan");
-        } else {
-            txtGender.setText("None");
+        switch (student.getJenkel()){
+            case "L" :
+                txtGender.setText("Laki - Laki");
+                break;
+            case "P" :
+                txtGender.setText("Perempuan");
+                break;
+            default:
+                txtGender.setText("None");
+                break;
         }
         txtBirth.setText(student.getTgl_lahir());
         txtAddress.setText(student.getAlamat());
