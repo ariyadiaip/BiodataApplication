@@ -1,6 +1,9 @@
 package id.sch.bdg.smkn4.pwpb.biodataapplication;
 
-public class Student {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Student implements Parcelable {
     int no;
     String name, tgl_lahir, jenkel, alamat;
 
@@ -45,4 +48,38 @@ public class Student {
     public void setAlamat(String alamat) {
         this.alamat = alamat;
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(this.no);
+        dest.writeString(this.name);
+        dest.writeString(this.tgl_lahir);
+        dest.writeString(this.jenkel);
+        dest.writeString(this.alamat);
+    }
+
+    protected Student(Parcel in) {
+        this.no = in.readInt();
+        this.name = in.readString();
+        this.tgl_lahir = in.readString();
+        this.jenkel = in.readString();
+        this.alamat = in.readString();
+    }
+
+    public static final Parcelable.Creator<Student> CREATOR = new Parcelable.Creator<Student>() {
+        @Override
+        public Student createFromParcel(Parcel source) {
+            return new Student(source);
+        }
+
+        @Override
+        public Student[] newArray(int size) {
+            return new Student[size];
+        }
+    };
 }

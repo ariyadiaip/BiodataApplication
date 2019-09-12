@@ -22,6 +22,7 @@
             android:layout_height="wrap_content"
             android:text="Nomor"/>
         <EditText
+            android:id="@+id/edtUNo"
             android:enabled="false"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -31,6 +32,7 @@
             android:layout_height="wrap_content"
             android:text="Nama"/>
         <EditText
+            android:id="@+id/edtUNama"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/ic_group_black_24dp"/>
@@ -39,6 +41,7 @@
             android:layout_height="wrap_content"
             android:text="Tanggal Lahir"/>
         <EditText
+            android:id="@+id/edtUTglLahir"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/ic_date_range_black_24dp"
@@ -48,6 +51,7 @@
             android:layout_height="wrap_content"
             android:text="Jenis Kelamin"/>
         <EditText
+            android:id="@+id/edtUJenkel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="L atau P"
@@ -57,6 +61,7 @@
             android:layout_height="wrap_content"
             android:text="Alamat"/>
         <EditText
+            android:id="@+id/edtUAlamat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/ic_place_black_24dp"

@@ -30,7 +30,7 @@
            android:textSize="16sp"/>
 
        <TextView
-           android:id="@+id/edtNo"
+           android:id="@+id/txtNo"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:text="0"/>
@@ -50,7 +50,7 @@
            android:textSize="16sp"/>
 
        <TextView
-           android:id="@+id/edtNama"
+           android:id="@+id/txtNama"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:text="Aip Ariyadi"/>
@@ -70,7 +70,7 @@
            android:textSize="16sp"/>
 
        <TextView
-           android:id="@+id/edtTglLahir"
+           android:id="@+id/txtTglLahir"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:text="2002-04-18"/>
@@ -90,7 +90,7 @@
            android:textSize="16sp"/>
 
        <TextView
-           android:id="@+id/edtJenkel"
+           android:id="@+id/txtJenkel"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:text="Laki - Laki"/>
@@ -110,7 +110,7 @@
            android:textSize="16sp"/>
 
        <TextView
-           android:id="@+id/edtAlamat"
+           android:id="@+id/txtAlamat"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:text="Kopo Cirangrang"/>

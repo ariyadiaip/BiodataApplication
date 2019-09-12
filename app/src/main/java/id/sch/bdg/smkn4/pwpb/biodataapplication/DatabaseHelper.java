@@ -59,18 +59,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             String name = c.getString(1);
             String date = c.getString(2);
             String gender = c.getString(3);
-            String jenkel = "none";
-            if (gender.equals("L") || gender.equals("l")) {
-                jenkel = "Laki - Laki";
-            } else if (gender.equals("P") || gender.equals("p")) {
-                jenkel = "Perempuan";
-            }
             String address = c.getString(4);
             Student student = new Student();
             student.setNo(no);
             student.setName(name);
             student.setTgl_lahir(date);
-            student.setJenkel(jenkel);
+            student.setJenkel(gender);
             student.setAlamat(address);
             userList.add(student);
         }
@@ -88,15 +82,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(KEY_NAME, student.getName());
         values.put(KEY_DATEBIRTH, student.getTgl_lahir());
-        String gender = "none";
-        if (student.getJenkel().equals("Laki - Laki")) {
-            gender = "L";
-        } else if (student.getJenkel().equals("Perempuan")) {
-            gender = "P";
-        }
-        values.put(KEY_GENDER, gender);
+        values.put(KEY_GENDER, student.getJenkel());
         values.put(KEY_ADDRESS, student.getAlamat());
-        String whereClause = KEY_NO + "='" + student.getNo() + "'";
+        String whereClause = KEY_NO + "=" + student.getNo() + "";
         db.update(TABLE_NAME, values, whereClause,null);
     }
 }
